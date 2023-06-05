@@ -37,14 +37,17 @@ fields.forEach((field) => {
     feedback.textContent = '';
   });
 
-  // Set up listener to capture invalid event fired from checkValidity() and populate custom validation message
+  // Set up listener to capture invalid event fired from checkValidity()
+  // Populate custom validation message
   field.addEventListener('invalid', () => {
     field.setAttribute('aria-invalid', 'true');
     const message = field.validationMessage;
     feedback.textContent = message;
   });
 
+  // On leaving input, check validity and inform user if invalid
   field.addEventListener('blur', () => {
+    // N.b. this will fire the 'invalid' event if input state is invalid
     field.checkValidity();
   });
   
