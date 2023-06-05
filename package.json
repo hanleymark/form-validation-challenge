@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "test": "node --test",
+    "test:1": "node test/1.test.js",
+    "test:2": "node test/2.test.js",
+    "test:3": "node test/3.test.js",
+    "test:4": "node test/4.test.js",
+    "test:5": "node test/5.test.js",
+    "test:6": "node test/6.test.js",
+    "test:7": "node test/7.test.js"
+  },
+  "devDependencies": {
+    "eslint": "^8.24.0",
+    "jsdom": "^20.0.1"
+  },
+  "volta": {
+    "node": "18.16.0"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "es2021": true
+    }
+  }
+}
