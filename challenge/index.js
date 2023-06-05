@@ -43,4 +43,9 @@ fields.forEach((field) => {
     const message = field.validationMessage;
     feedback.textContent = message;
   });
+
+  field.addEventListener('blur', () => {
+    field.checkValidity();
+  });
+  
 });
